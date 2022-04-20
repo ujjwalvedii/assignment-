@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Assignment2Q6{
+	
+	public static void main(String [] args) {
+		Persistance p = new FilePersistance();
+		p.persist();
+	}
+}
+
+abstract class Persistance{
+	abstract void persist();
+}
+
+class FilePersistance extends Persistance{
+	Scanner s = new Scanner(System.in);
+	int i;
+	void persist() {
+		i = s.nextInt();
+		System.out.println("File invoked");
+	}
+}
+
+class DatabasePersistance extends Persistance{
+	Scanner s = new Scanner(System.in);
+	int j;
+	void persist() {
+		j = s.nextInt();
+		System.out.println("File invoked");
+	}
+}
